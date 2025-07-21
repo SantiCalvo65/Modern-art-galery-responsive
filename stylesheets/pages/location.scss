@@ -1,0 +1,120 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.location {
+    background-color: $negro;
+    padding-bottom: 56px;
+
+    .img-phone {
+       width: 100%;
+        height: 550px;
+        z-index: -1;
+
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+
+    .img-tablet {
+        display: none;
+
+        @include breakpoint(tablet){
+            display: block;
+            width: 100%;
+            height: 600px;
+            margin-bottom: 80px;
+        }
+
+         @include breakpoint(desktop){
+            display: none;
+        }
+    }
+
+    .img-desktop {
+        display: none;
+
+        @include breakpoint(tablet){
+            display: none;
+        }
+
+        @include breakpoint(desktop){
+            display: block;
+             width: 100%;
+            height: 600px;
+            margin-bottom: 80px;
+        }
+
+    }
+
+    .button-1 {
+        z-index: 1;
+        position: absolute;
+
+        img {
+            width: 8px;
+            height: 24px;
+        }
+    }
+
+    .hero-location {
+        @include breakpoint(tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            margin-bottom: 40px;
+            
+
+        }
+    }
+
+    h1 {
+        color: $blanco;
+        font-family: $primary-font;
+        font-size: 50px;
+        font-weight: 900;
+         @include breakpoint(tablet) {
+            grid-column: 1 / 2;
+         }
+    }
+
+    h2 {
+        color: $marron;
+        font-family: $primary-font;
+        font-size: 34px;
+        font-weight: 900;
+        text-transform: uppercase;
+        @include breakpoint(tablet) {
+            grid-column: 2 / 3;
+         }
+    }
+
+    ul {
+
+        @include reset-list();
+
+        li{
+            color: $blanco;
+            font-family: $secondary-font;
+            font-weight: 200;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        @include breakpoint(tablet) {
+            grid-column: 2 / 3;
+         }
+    }
+    
+    p {
+        color: $blanco;
+            font-family: $secondary-font;
+            font-weight: 200;
+            font-size: 18px;
+            line-height: 24px;
+
+         @include breakpoint(tablet) {
+            grid-column: 2 / 3;
+         }   
+    }
+
+}

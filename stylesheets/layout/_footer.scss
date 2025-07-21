@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+footer {
+    background-color: $negro;
+    padding: 48px 32px;
+
+    @include breakpoint(tablet){
+        padding: 56px 40px;
+    }
+
+
+    a {
+        margin-bottom: 38px;
+    }
+
+    p {
+        color: $blanco;
+        font-family: $secondary-font;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 28px;
+
+        @include breakpoint(tablet){
+            margin: 0;
+        }
+    }
+
+    .rs {
+       padding-right: 15px;
+    }
+}
+
+
+.footer-loc {
+    background-color: $marron;
+
+    p { 
+        color: $negro;
+    }
+
+    @include breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    @include breakpoint(desktop){
+         gap: 140px;
+    }
+
+    .foot-img {
+        display: flex;
+    }
+}
+
+.div-footer {
+    @include breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    @include breakpoint(desktop){
+        gap: 140px;
+    }
+
+}
+
+.fot-img {
+    display: flex;
+}
